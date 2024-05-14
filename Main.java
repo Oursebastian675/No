@@ -19,14 +19,14 @@ public class Main {
         System.out.println("Ingrese el tipo de contrato (fijo u horas):");
         String tipoContrato = src.next();
 
-        // Calcular salario bruto
+        // salario bruto
         double salarioBruto = horasTrabajadas * tarifaPorHora;
 
-        // Calcular deducciones
+        // deducciones
         double seguridadSocial = calcularSeguridadSocial(salarioBruto);
         double salud = calcularSalud(salarioBruto);
 
-        // Calcular salario neto
+        // salario neto
         double salarioNeto = salarioBruto - seguridadSocial - salud;
 
         // Mostrar resultados
@@ -41,14 +41,14 @@ public class Main {
         src.close();
     }
 
-    // Método para calcular la seguridad social (ejemplo de un 10% fijo)
+    // Método para calcular la seguridad social (de un 10% fijo)
     public static double calcularSeguridadSocial(double salarioBruto) {
-        return salarioBruto * 0.1; // Puedes ajustar el porcentaje según lo necesites
+        return salarioBruto * 0.1;
     }
 
-    // Método para calcular la salud (ejemplo de un 5% fijo)
+    // Método para calcular la salud (de un 5% fijo)
     public static double calcularSalud(double salarioBruto) {
-        return salarioBruto * 0.05; // Puedes ajustar el porcentaje según lo necesites
+        return salarioBruto * 0.05; 
 
         
     }
