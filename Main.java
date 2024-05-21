@@ -7,7 +7,7 @@ public class Main {
         System.out.println("\n--- Calculadora de Nomina ---");
         Scanner src = new Scanner(System.in);
 
-        // Solicitar datos del empleado
+        // Aqui se empieza a pedir la info de el empleado
         System.out.println("Ingrese el nombre del empleado:");
         String nombre = src.nextLine();
 
@@ -19,18 +19,19 @@ public class Main {
 
         System.out.println("Ingrese el tipo de contrato (fijo u horas):");
         String tipoContrato = src.next();
+        //Aqui son los calculos
 
-        // salario bruto
+        // el salario bruto
         double salarioBruto = horasTrabajadas * tarifaPorHora;
 
-        // deducciones
+        // las deducciones
         double seguridadSocial = calcularSeguridadSocial(salarioBruto);
         double salud = calcularSalud(salarioBruto);
 
-        // salario neto
+        // el salario neto
         double salarioNeto = salarioBruto - seguridadSocial - salud;
 
-        // Mostrar resultados
+        // Y aqui se imprimen los resultados :D
         System.out.println("\n--- Nómina de Empleado ---");
         System.out.println("Nombre: " + nombre);
         System.out.println("Tipo de contrato: " + tipoContrato);
@@ -42,6 +43,8 @@ public class Main {
         src.close();
     }
 
+    //estos son metodos
+    
     // Método para calcular la seguridad social (de un 10% fijo)
     public static double calcularSeguridadSocial(double salarioBruto) {
         return salarioBruto * 0.1;
